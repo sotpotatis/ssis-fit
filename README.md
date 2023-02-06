@@ -36,7 +36,7 @@ App screenshots are inside the `screenshots/` folder. There is also a video avai
 called `app.gif`.
 
 A website with information about the app (work in progress) is available inside the `website/` folder and currently
-also at https://20alse.ssis.nu/fitbit.
+also at https://20alse.ssis.nu/fit.
 
 ### Notes before developing
 
