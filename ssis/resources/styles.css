@@ -1,0 +1,114 @@
+/* Styling for the start page buttons */
+.bigButton rect { /* Button background */
+  width: 70%;
+  height: 35%;
+  fill: #64748b;
+  /* Apply corner radius to buttons in order to make them rounded */
+  rx: 5%;
+  ry: 5%;
+}
+.bigButton image { /* Button image */
+  width: 15%;
+  height: 15%;
+}
+.bigButton text { /* Button text */
+  font-weight: bold;
+  fill: white;
+  text-anchor: middle;
+}
+
+/* Error screen styling*/
+#error-icon {
+  width: 25%;
+  height: 50%;
+}
+#error-title {
+  font-weight: bold;
+  font-size: 48;
+  text-anchor: middle;
+  fill: white;
+}
+#error-message {
+  fill: white;
+}
+/* Loading screen styling */
+#loading-title {
+  font-size: 12;
+  text-anchor: middle;
+}
+
+/* Styling for the view header of scrollviews */
+#view-header rect {
+  fill: grey;
+  width: 100%;
+  height: 25%
+}
+#view-header text {
+  fill: white;
+  font-weight: bold;
+  text-anchor: middle;
+}
+
+/* Base classes for all tile lists and tile items */
+.tileList {
+}
+
+.tileListHeaderText {
+  font-weight: bold;
+  font-size: 30;
+}
+.tileItem {
+  display: none
+}
+.tileItem rect {
+  fill: grey;
+  width: 100%;
+  height: 2;
+}
+/* Individual styling for tile items */
+/* Styling for the lunch screen/menu screen */
+#lunch-tile-item {
+  height: 250;
+}
+.lunchTileItemText {
+  fill: white;
+  text-anchor: middle;
+  text-length: 256;
+  width: 80%;
+  height: 240;
+  text-overflow: ellipsis;
+}
+/* Styling for the schedule screen */
+#schedule-tile-item {
+ height: 130;
+}
+#schedule-tile-item textarea {
+  fill: white;
+}
+.scheduleTileItemSubject {
+  fill: white;
+  width: 80%;
+  text-length: 32;
+  rows: 1;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.scheduleTileItemRoom {
+  fill: white;
+  width: 55%;
+  text-length: 32;
+  text-overflow: ellipsis;
+  rows: 1;
+}
+
+.scheduleTileItemTeacher {
+  fill: white;
+  width: 30%;
+  text-length: 3;
+  rows: 1;
+  text-overflow: ellipsis;
+}
+.scheduleTileItemIcon {
+  width: 24;
+  height: 24;
+}

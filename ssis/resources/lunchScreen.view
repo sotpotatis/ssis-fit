@@ -1,0 +1,18 @@
+<svg>
+
+  <animate attributeName="x" from="100%" to="0" begin="load" dur="0.5" easing="ease-in-out" />
+    <!-- Lunch menu -->
+    <svg id="lunchMenu" pointer-events="all">
+        <use id="lunchMenuItems" class="tileList" href="#tile-list">
+            <var id="virtual" value="1"/>
+            <var id="reorder-enabled" value="0"/>
+            <var id="peek-enabled" value="0"/>
+            <var id="separator-height-bottom" value="5"/>
+            <use id="lunchMenuItemsPool" href="#tile-list-pool">
+                <use id="lunchMenuItemsPool[0]" href="#lunch-tile-item"></use>
+                <use id="lunchMenuItemsPool[1]" href="#lunch-tile-item"></use>
+                <use id="lunchMenuItemsPool[2]" href="#lunch-tile-item"></use>
+            </use>
+        </use>
+    </svg>
+</svg>

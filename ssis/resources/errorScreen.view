@@ -1,0 +1,24 @@
+<svg>
+    <!-- Error message -->
+    <svg id="errorScreen" pointer-events="all">
+      <animate attributeName="x" from="100%" to="0" begin="load" dur="0.5" easing="ease-in-out" />
+        <use href="#scrollview">
+            <!-- Error message title -->
+            <use href="#scrollview-item" height="50%">
+                <image id="error-icon" x="37%" y="5%" href="alert.png"/>
+            </use>
+            <use href="#scrollview-item" height="15%">
+                <text id="error-title" x="50%">Fel</text>
+            </use>
+            <!-- Error message content -->
+            <use href="#scrollview-item" display="flexible-height">
+                <use id="error-message" href="#dynamic-textarea">
+                    <set href="#text" attributeName="text-buffer" to=""/>
+                    <set href="#text" attributeName="text-anchor" to="middle"/>
+                    <!-- Allow 256 characters in loading message -->
+                    <set href="#text" attributeName="text-length" to="256"/>
+                </use>
+            </use>
+        </use>
+    </svg>
+</svg>

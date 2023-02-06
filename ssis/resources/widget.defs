@@ -1,0 +1,59 @@
+<svg>
+  <defs>
+    <!-- Import everything we need -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="import" href="/mnt/sysassets/system_widget.defs" />
+    <link rel="import" href="/mnt/sysassets/widgets/text_button.defs" />
+    <link rel="import" href="/mnt/sysassets/widgets/baseview_widget.defs" />
+    <link rel="import" href="/mnt/sysassets/widgets/scrollview_widget.defs" />
+    <link rel="import" href="/mnt/sysassets/widgets/scrollbar.defs" />
+    <link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.defs" />
+    <!-- Create a reusable title for scroll views.
+     Currently unused, but implementing scrollviews are quite probable in the future,
+     so it is kept here. -->
+    <symbol id="view-header" href="#scrollview-header">
+      <rect fill="grey" x="0" y="0"></rect>
+      <text id="text" x="50%" y="15%"></text>
+    </symbol>
+    <!-- Create a reusable title for tile lists. Currently unused,
+    but might be used in the future! -->
+    <symbol id="tile-header" href="#tile-list-header">
+        <text id="text" fill="white" class="tileListHeaderText"/>
+    </symbol>
+    <!-- Also create the classes for tile items -->
+    <!-- For the daily lunch menu -->
+    <symbol id="lunch-tile-item" href="#tile-list-item" class="tileItem" height="250">
+      <!-- Lunch item name -->
+      <textarea class="lunchTileItemText" id="text" x="10%" y="5%"/>
+      <!-- Item divider -->
+      <rect y="245"/>
+    </symbol>
+    <!-- For the schedule -->
+    <symbol id="schedule-tile-item" class="tileItem" href="#tile-list-item" height="140">
+      <!-- Subject name -->
+      <textarea id="subject" class="scheduleTileItemSubject" x="10%" y="10"/>
+      <!-- Room and teacher information --->
+      <image id="room-icon" href="door.png" class="scheduleTileItemIcon" x="5%" y="50" />
+      <textarea class="scheduleTileItemRoom" x="5%+24" y="45" id="room"></textarea>
+      <!-- Room and teacher information --->
+      <image id="teacher-icon" href="account.png" class="scheduleTileItemIcon" x="65%" y="50" />
+      <textarea class="scheduleTileItemTeacher" x="65%+24" y="45" id="teacher"></textarea>
+        <!-- Time information -->
+      <image id="times-icon" href="clock-time-eight.png" class="scheduleTileItemIcon" x="5%" y="95" />
+      <textarea x="5%+24" fill="white" text-length="11" y="85" width="95%-24" id="times"/>
+      <!-- Item divider -->
+      <rect y="130"/>
+    </symbol>
+    <!-- Backswipes and back buttons have not been implemented yet,
+    but since it is something that would be cool to resolve, I thought I would
+    keep my efforts to try to make it work. -->
+    <!-- Used for backswipe -->
+    <symbol id="backswipe">
+      <animate attributeName="x" from="100%" to="0" begin="load" dur="0.5" easing="ease-in-out" />
+    </symbol>
+    <!-- Used for implementing a back button -->
+    <symbol id="back-button">
+      <image href="arrow-left-thin.png" id="back-button-icon" x="50%" y="50%" width="10%" height="50%"  pointer-events="all" display="none"/>
+    </symbol>
+  </defs>
+</svg>

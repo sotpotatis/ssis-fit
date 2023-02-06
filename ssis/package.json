@@ -1,0 +1,34 @@
+{
+  "name": "ssis",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "~6.1.0",
+    "@fitbit/sdk-cli": "^1.7.3",
+    "eslint": "^8.31.0"
+  },
+  "fitbit": {
+    "appUUID": "8c504a85-a012-43f9-b302-378a9396a3e1",
+    "appType": "app",
+    "appDisplayName": "SSIS",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ffffff",
+    "requestedPermissions": [
+      "access_internet",
+      "run_background"
+    ],
+    "buildTargets": [
+      "atlas"
+    ],
+    "i18n": {},
+    "defaultLanguage": "en-US"
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
+  },
+  "dependencies": {
+    "luxon": "^3.2.0"
+  }
+}

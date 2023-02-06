@@ -1,0 +1,19 @@
+<svg>
+    <!-- Loading screen -->
+    <animate attributeName="x" from="100%" to="0" begin="load" dur="0.5" easing="ease-in-out" />
+    <svg id="loadingScreen" pointer-events="all">
+        <use href="#scrollview">
+            <use href="#scrollview-item" height="12%">
+                <text id="loading-title" fill="white">Laddar...</text>
+            </use>
+            <use href="#scrollview-item" display="flexible-height">
+                <use id="loading-message" href="#dynamic-textarea" fill="white">
+                    <set href="#text" attributeName="text-buffer" to=""/>
+                    <set href="#text" attributeName="text-anchor" to="middle"/>
+                    <!-- Allow 120 characters in loading message -->
+                    <set href="#text" attributeName="text-length" to="120"/>
+                </use>
+            </use>
+        </use>
+    </svg>
+</svg>

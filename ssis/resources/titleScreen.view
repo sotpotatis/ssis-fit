@@ -1,0 +1,22 @@
+<svg>
+    <!-- Define some reusable stuff -->
+    <defs>
+        <!-- Create a big, clickable button! -->
+        <symbol id="bigButton" class="bigButton" pointer-events="all">
+            <rect x="15%" y="15%" />
+            <image id="button-icon" x="20%" y="25%" href="placeholder.png" />
+            <text id="button-text" x="60%" y="35%"></text>
+        </symbol>
+    </defs>
+    <!-- Start view -->
+    <svg id="titleScreen" pointer-events="all">
+        <use id="lunch-button" href="#bigButton" y="0">
+            <set href="#button-icon" attributeName="href" to="silverware-fork-knife.png"/>
+            <set href="#button-text" attributeName="text-buffer" to="Lunch"/>
+        </use>
+        <use id="schedule-button" href="#bigButton" y="40%">
+            <set href="#button-icon" attributeName="href" to="calendar.png"/>
+            <set href="#button-text" attributeName="text-buffer" to="Schema"/>
+        </use>
+    </svg>
+</svg>
