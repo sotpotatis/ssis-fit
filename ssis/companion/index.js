@@ -91,14 +91,12 @@ function sendScheduleInformation(){
     }
     const roomName = roomNameOption.values[0].value // Get room name from multi-choice view
     try {
-        scheduleAPI.getSchedule(roomName, function(events){
-        console.log("Companion received schedule information", events)
-        if (events === null){
+        scheduleAPI.getSchedule(roomName, function(scheduleEvents){
+        console.log("Companion received schedule information", scheduleEvents)
+        if (scheduleEvents === null){
             console.log("Event retrieval failed. Sending error...")
             sendMessageIfOpen(generateErrorMessage("Ajdå! Ett fel inträffade när schemat skulle hämtas. Är du säker på att du valt rätt klass och att du har lektioner idag?"))
         }
-        // We are only interested in the events that are not all-day (such as homework announcements etc.). Send that.
-        const scheduleEvents = events.scheduleEvents
         if (scheduleEvents.length > 0){
             console.log("Sending schedule events for today...")
             sendMessageIfOpen(generateSuccessMessage({data: scheduleEvents, responseType: requestSchedule}))

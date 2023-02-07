@@ -88,10 +88,7 @@ export default class ScheduleAPI{
         ).then(
             function(json){
                 console.log("Received response JSON from SSIS server. Converting into data...", json)
-                let events = {
-                    allDayEvents: [], // All day events such as homework etc.
-                    scheduleEvents: [] // Schedule events (lessons)
-                }
+                let scheduleEvents = [] // Schedule events (lessons)
                 if (json !== null){
                     console.log("Parsing received response...")
                     const now = DateTime.now()
@@ -106,7 +103,7 @@ export default class ScheduleAPI{
                             start: event.start_time,
                             end: event.end_time,
                             allParticipants: [],
-                            isAllDay: eventStartDateTime-eventEndDateTime === 0 || (eventStartDateTime.hour < 7 && eventEndDateTime.length < 7),
+                            isAllDay: eventStartDateTime.hour < 7 && eventEndDateTime.hour < 7,
                             hasPassed: now > eventEndDateTime
                         }
                         // Iterate over participants and parse them
@@ -130,20 +127,14 @@ export default class ScheduleAPI{
                             }
                         }
                         console.log("Done generating event: ", event + ". Adding to final data...")
-                        if (!event.isAllDay){
-                           events.scheduleEvents.push(parsedEvent)
-                        }
-                        else {
-                            events.allDayEvents.push(parsedEvent)
-                        }
-
+                       scheduleEvents.push(parsedEvent)
                     }
                 }
                 else {
                     console.log("No data for today was found.")
                 }
-                console.log("Final events loaded were", events)
-                callback(events)
+                console.log("Final events loaded were", scheduleEvents)
+                callback(scheduleEvents)
             }
         ).catch((error)=>{
             console.log(`Encountered an error in the schedule request: ${error}.`)

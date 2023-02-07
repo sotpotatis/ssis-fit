@@ -8,25 +8,33 @@
     <link rel="stylesheet" href="./styles.css"/>
     <!-- Iconify -->
     <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+    <!-- Favicons and other metadata -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#66728a">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <main id="main-content">
-    <div id="header">
-         <div id="video-wrapper">
+    <div id="header" class="page-section">
         <h1>ssis</h1>
         <img alt="Video som visar appens funktioner" id="app-screenshot" src="./app.gif"/>
         <h1>fit</h1>
-         </div>
     </div>
     <hr>
-    <div id="page-content">
-        <h2>"allt du vill veta, direkt på din handled!"</h2>
+    <div id="page-content" class="page-section">
+        <h2 class="italic-h2">"allt du vill veta, direkt på din handled!"</h2>
+        <p class="subtitle">ssis-fit är en Fitbit-app för att visa schemat samt lunchmenyn direkt i din klocka*.</p>
         <h3>ladda ner</h3>
         <button onclick="location.href='https://gallery.fitbit.com/details/8c504a85-a012-43f9-b302-378a9396a3e1'" class="button button-big button-blue"><iconify-icon icon="ic:baseline-download"></iconify-icon> Fitbit Gallery</button>
+        <p><small>*kompatibel med Fitbit Versa 3 och Fitbit Sense</small></p>
         <h3>bidra</h3>
         <button onclick="location.href='https://github.com/sotpotatis/ssis-fit'" class="button button-big button-black"><iconify-icon icon="carbon:logo-github"></iconify-icon> GitHub</button>
     </div>
-    <div id="footer">
+    <div id="footer" class="page-section">
         <p>made with <3 by 20alse</p>
     </div>
 </main>

@@ -10,8 +10,7 @@ and libraries to make future development easier.
 
 **The app can be downloaded [LINK PENDING] here.**
 
-*The current version of the app is built for the Fitbit Versa 3. If you'd like it on more devices, why not make a pull request?
-Implementing more devices should be quite simple.*
+*The current version of the app is built for the Fitbit Versa 3 and the Fitbit Sense, the currently available devices on the Fitbit SDK v5.*
 
 ## Features
 
@@ -23,6 +22,10 @@ The daily lunch menu is just a tap away, right on your wrist! The lunch menu is 
 
 What's the next lesson? Worry no more ;) Using the school's own API, the schedule with lesson, room and teacher information is now also brought
 to your wrist.
+
+> **Info**
+> 
+> Also see the [Changelog](CHANGELOG.md) for update information.
 
 ## Development
 

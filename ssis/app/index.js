@@ -151,7 +151,7 @@ function renderSchedule(){
                             if (input === null){
                                 return "--"
                             }
-                            else if (typeof input === "object" && input.length === 0){
+                            else if (typeof input === "object" || input.length === 0){
                                 return "--"
                             }
                             else {
@@ -159,8 +159,14 @@ function renderSchedule(){
                             }
                         }
                         console.log(`Rendering schedule item ${JSON.stringify(info.value)}...`)
-                        // Get elements in the tile
+                        // Get elements in the tile and set them
                         tile.getElementById("subject").text = handleUnknownValue(info.value.subject)
+                        // Note: Below are considered details and they should be ignored for all-day items,
+                        // but .display = "none" doesn't seem to work with Fitbit's tile view.
+                        // A TODO is to display all-day events (homework events etc.) more clearly.
+                        // if (info.value.isAllDay){
+                        //   tile.getElementById("detailed-information").display = "none"
+                        // }
                         tile.getElementById("times").text = `${handleUnknownValue(info.value.start)}-${handleUnknownValue(info.value.end)}`
                         tile.getElementById("room").text = handleUnknownValue(info.value.room)
                         tile.getElementById("teacher").text = handleUnknownValue(info.value.teachers.join(","))
