@@ -8,9 +8,9 @@ on a Fitbit watch!
 This is my first Fitbit application ever and my first project using the Fitbit SDK, so I learned a lot and also created some relevant functions
 and libraries to make future development easier.
 
-**The app can be downloaded [LINK PENDING] here.**
+**The app can be downloaded [here](https://gallery.fitbit.com/details/8c504a85-a012-43f9-b302-378a9396a3e1).**
 
-*The current version of the app is built for the Fitbit Versa 3 and the Fitbit Sense, the currently available devices on the Fitbit SDK v5.*
+_The current version of the app is built for the Fitbit Versa 3 and the Fitbit Sense, the currently available devices on the Fitbit SDK v5._
 
 ## Features
 
@@ -24,7 +24,7 @@ What's the next lesson? Worry no more ;) Using the school's own API, the schedul
 to your wrist.
 
 > **Info**
-> 
+>
 > Also see the [Changelog](CHANGELOG.md) for update information.
 
 ## Development
@@ -35,7 +35,7 @@ Here is how to set up a local development environment:
 
 The Fitbit app is inside the `ssis/` folder.
 
-App screenshots are inside the `screenshots/` folder. There is also a video available in the `website/` folder 
+App screenshots are inside the `screenshots/` folder. There is also a video available in the `website/` folder
 called `app.gif`.
 
 A website with information about the app (work in progress) is available inside the `website/` folder and currently
@@ -45,21 +45,25 @@ also at https://20alse.ssis.nu/fit.
 
 It takes some time to learn the Fitbit SDK. If you have not used it before, here are some great documentation pages that may help you
 (this is not a complete list, you'll have to do some searching yourself):
-* [SDK overview](https://dev.fitbit.com/build/guides/application/)
-* [SVG overview](https://dev.fitbit.com/build/guides/user-interface/svg/)
-* [Messaging API](https://dev.fitbit.com/build/guides/communications/messaging/)
-* [Companion](https://dev.fitbit.com/build/guides/companion/)
-* [Tile lists & tile list pools](https://dev.fitbit.com/build/guides/user-interface/svg-components/views/#tile-list)
 
-### Setup 
+- [SDK overview](https://dev.fitbit.com/build/guides/application/)
+- [SVG overview](https://dev.fitbit.com/build/guides/user-interface/svg/)
+- [Messaging API](https://dev.fitbit.com/build/guides/communications/messaging/)
+- [Companion](https://dev.fitbit.com/build/guides/companion/)
+- [Tile lists & tile list pools](https://dev.fitbit.com/build/guides/user-interface/svg-components/views/#tile-list)
+
+### Setup
 
 1. Clone the repository.
 2. Run `npm install`.
 3. Although testing live is the best, getting the [Fitbit OS simulator]() is great for quickly debugging changes.
-After downloading, make sure to configure it for the Versa 3 by navigating to "Settings"->"Device type" and choose "Versa 3".
+   After downloading, make sure to configure it for the Versa 3 by navigating to "Settings"->"Device type" and choose "Versa 3" (atlas)
+   or "Sense" (vulcan).
 4. Now you can `npx fitbit`. You might have to log in if it is your first time using the tool.
 5. For building and installing the app, type `bi` (short for `build-and-install`). For installing the app without rebuilding,
-type `install`.
+   type `install`.
+6. Before committing, take use of the automatic code formatting on commit ([Prettier](https://prettier.io/)) by using [Pre-commit](https://pre-commit.com/).
+   Run `pre-commit install` to install the code formatter.
 
 ### Dependencies
 
@@ -72,9 +76,9 @@ Material Design Icons is licenced under [Apache 2.0](https://github.com/google/m
 
 ## To-do list/wishlist
 
-[ ] Automatically scroll to active schedule item
+- [x] Automatically scroll to active schedule item
 
-[ ] Implement backswipe functionality (backswiping currently will exit the app)
+- [ ] Implement backswipe functionality (backswiping currently will exit the app)
 
 ### Troubleshooting
 
