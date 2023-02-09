@@ -1,106 +1,106 @@
 /* styles.css */
 /* Main styles for the website */
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 /* General styling */
 body {
-    padding: 0;
-    margin: 0;
-    color: white;
-    font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Lato", sans-serif;
 }
 .page-section {
-    max-width: 100vw;
+  max-width: 100vw;
 }
 hr {
-    border: 0.1em solid #202020;
-    padding: 0;
-    margin: 0;
+  border: 0.1em solid #202020;
+  padding: 0;
+  margin: 0;
 }
 /* Section styling */
 #header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 2em 0em;
-    background:black;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0em;
+  background: black;
+  min-height: 100vh;
 }
 #arrow-down {
-    font-size: 5em;
+  font-size: 5em;
 }
 h1 {
-    font-weight: 900;
-    font-size: 10em;
+  font-weight: 900;
+  font-size: 10em;
 }
 h2 {
-    font-weight: bold;
-    font-size: 3em;
+  font-weight: bold;
+  font-size: 3em;
 }
 h3 {
-    font-size: 2em;
-    font-weight: bold;
+  font-size: 2em;
+  font-weight: bold;
 }
 .subtitle {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 #app-screenshot {
-    max-width: 100vw;
-    aspect-ratio: initial;
+  max-width: 100vw;
+  aspect-ratio: initial;
 }
 #page-content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    background: #181818;
-    padding: 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #181818;
+  padding: 2em;
 }
 .italic-h2 {
-    font-weight: bolder; !important;
-    font-style: italic;
+  font-weight: bolder !important;
+  font-style: italic;
 }
 #footer {
-    display: flex;
-    width: 100vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #1c1c1c;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1c1c1c;
 }
 /* Buttons */
 .button {
-    padding: 1em 3em;
-    border: 0.1em solid;
-    border-radius: 1em;
-    font-weight: bold;
-    max-width: fit-content;
-    color: white;
+  padding: 1em 3em;
+  border: 0.1em solid;
+  border-radius: 1em;
+  font-weight: bold;
+  max-width: fit-content;
+  color: white;
 }
 .button-big {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 .button-blue {
-    background: #00b0b9;
-    border-color: #04888d;
+  background: #00b0b9;
+  border-color: #04888d;
 }
 .button-black {
-    background: #565a5d;
-    border-color: #252525;
+  background: #565a5d;
+  border-color: #252525;
 }
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 /* Media queries */
-@media only screen and (max-width: 1400px){
-    #header {
-        flex-direction: column;
-    }
+@media only screen and (max-width: 1400px) {
+  #header {
+    flex-direction: column;
+  }
 }
-@media only screen and (min-width: 1401px){
-    #app-screenshot {
-            height: 50vh;
-    }
+@media only screen and (min-width: 1401px) {
+  #app-screenshot {
+    height: 50vh;
+  }
 }
